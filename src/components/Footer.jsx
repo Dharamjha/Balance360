@@ -29,7 +29,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-sections">
           <div className="footer-brand">
-            <h2>SerenityMind</h2>
+            <h2>Balance360</h2>
             <p>Guiding you through your journey of wellness, mindfulness, and inner peace.</p>
           </div>
           
@@ -87,11 +87,11 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-container">
           <div className="copyright">
-            <p>&copy; {new Date().getFullYear()} SerenityMind. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Balance360. All rights reserved.</p>
           </div>
           <div className="social-links">
             <a href="https://facebook.com" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="https://instagram.com" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://www.instagram.com/balanceee360/" aria-label="Instagram"><FaInstagram /></a>
             <a href="https://twitter.com" aria-label="Twitter"><FaTwitter /></a>
             <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedinIn /></a>
           </div>

@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./About.css";
 
+const testimonials = [
+  { text: "Balance360 transformed my approach to wellness. I've never felt more centered and energized.", author: "Sarah J." },
+  { text: "A perfect blend of mindfulness and holistic health. Love the community!", author: "David R." },
+  { text: "Their programs helped me achieve balance in my busy life. Highly recommend!", author: "Emily T." },
+  { text: "Amazing guidance and support. My health and energy levels have improved!", author: "James L." },
+  { text: "Incredible experience! The mindfulness practices really made a difference.", author: "Sophia M." },
+];
+
 const AboutUs = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="about-container">
       <div className="about-content">
         <h1 className="fade-in">Welcome to Balance360</h1>
         <p className="fade-in delay-1">
           At <span>Balance360</span>, we believe in achieving total well-being—mind, body, and soul.
-          Our mission is to help you find **harmony, balance, and vitality** through holistic wellness practices.
+          Our mission is to help you find harmony, balance, and vitality through holistic wellness practices.
         </p>
         
         <div className="about-grid">
@@ -52,8 +70,8 @@ const AboutUs = () => {
           <h2>What Our Community Says</h2>
           <div className="testimonial-slider">
             <div className="testimonial slide-in-left">
-              <p>"Balance360 transformed my approach to wellness. I've never felt more centered and energized."</p>
-              <div className="testimonial-author">- Sarah J.</div>
+              <p>"{testimonials[index].text}"</p>
+              <div className="testimonial-author">- {testimonials[index].author}</div>
             </div>
           </div>
         </div>
